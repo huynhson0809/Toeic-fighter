@@ -1,0 +1,52 @@
+<div class="app">
+    <header class="header">
+        <div class="grid wide">
+            <div class="row sm-gutter header-common">
+                <div class="header-with-search col l-2">
+                    <lable for="ok" class="header__mobile-search hide-on-tablet">
+                        <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                    </lable>
+                    <div class="header__logo hide-on-tablet hide-on-mobile">
+                        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/294530440_1170477743498124_4070115661256143354_n.png?stp=dst-png_p403x403&_nc_cat=106&ccb=1-7&_nc_sid=aee45a&_nc_ohc=JoQMi07nozAAX8P9L5u&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVKfCzEiSdQ77YymHh5VYy6HmStzjjv0mBs66SUw9d-R3w&oe=6301FD54"
+                            alt="" srcset="" class="header__logo-icon">
+                    </div>
+
+                    <input type="checkbox" id="ok" class="header__search-checkbox">
+                </div>
+                <nav class="navbar navbar-on-tablet col l-10 m-12 c-12 navbar-on-mobile">
+                    <ul class="navbar__list">
+                        <li class="navbar__item navbar__item-on-tablet navbar__item-on-mobile navbar__item-on-mobile-1">
+                            <a href="http://localhost:5000" class="navbar__item-link navbar__item-link-on-tablet navbar__item-link-on-mobile navbar__item-link--separate">Trang chủ</a>
+                        </li>
+                        <li class="navbar__item navbar__item-on-tablet hide-on-mobile">
+                            <a href="http://localhost:5000/blog"
+                                class="navbar__item-link navbar__item-link-on-tablet navbar__item-link--separate ">Bài viết</a>
+                        </li>
+                        <li class="navbar__item navbar__item-on-tablet navbar__item--has-qr hide-on-mobile">
+                            <a href="http://localhost:5000/discussion" class="navbar__item-link navbar__item-link-on-tablet navbar__item-link--separate">Thảo luận</a>
+                            
+                        </li>
+                        <li class="navbar__item  navbar__item-on-tablet navbar__item-on-mobile">
+                            <a href="/test" class="navbar__item-link navbar__item-link-on-tablet navbar__item-link-on-mobile navbar__item-link--separate">Thi online</a>
+                        </li>
+                        {{#if lcIsAuth}}
+                        <li class="navbar__item navbar__item-on-tablet navbar__item-on-mobile">
+                            <a class="navbar__item-link navbar__item-link-on-tablet navbar__item-link-on-mobile navbar__item-link--separate">Người dùng</a>
+                        </li>
+                        <li class="navbar__item navbar__item-on-tablet navbar__item-on-mobile">
+                            <a href="/auth/signout" class="navbar__item-link-on-tablet navbar__item-on-mobile navbar__item-link-on-mobile navbar__item-link ">Đăng xuất</a>
+                        </li>
+                        {{else}}
+                        <li class="navbar__item navbar__item-on-mobile">
+                            <a href="/auth/signin" class="navbar__item-link navbar__item-link-on-tablet  navbar__item-on-mobile navbar__item-link-on-mobile navbar__item-link--separate">Đăng nhập</a>
+                        </li>
+                        <li class="navbar__item navbar__item-on-mobile">
+                            <a href="/auth/signup" class="navbar__item-link-on-tablet navbar__item-link-on-mobile navbar__item-link ">Đăng ký</a>
+                        </li>
+                        {{/if}}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+</div>
